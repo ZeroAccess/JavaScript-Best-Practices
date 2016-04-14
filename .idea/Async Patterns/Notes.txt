@@ -1,0 +1,34 @@
+Async Patterns:
+    Callbacks:
+        You want named functions get rid of anonymous functions
+        You have (error, results) when dealing with callbacks, find what works in your enviroment and stay
+        consistent
+        Return your callbacks, if you're calling your callbacks just put return so it "ends"
+
+    Promises:
+        Extract callback function from within the parameters that were passing to a function and allow to seperate
+        concerns
+        In the course there was an html file and we had to use the Promises.js script and the script from
+        promisejs.org
+        Didn't go over the reject which is basically an error so you could add an error function
+
+    ES6 and Babel:
+        Check over ES6 (http://es6-features.org)
+        Node has support for this natively but you can use babel to give browser support
+
+        Command Prompt:
+            npm install -g babel-cli
+            touch .babelrc
+                //check the file and see what the preset is
+            npm install --save-dev babel-preset-es2015
+                // app.js is whatever the js file is
+            babel app.js -o es6.js
+
+    Async - Await:
+        A new updated promise/call back style
+        http://kangax.github.io/compat-table/es6/
+            //Helps compare what browsers support what
+            //find what supports what you need and install that for example the async is supported by stage-3
+        npm install -save babel-preset-stage-3
+            //Then run compiler
+        babel app.js -o esNext.js

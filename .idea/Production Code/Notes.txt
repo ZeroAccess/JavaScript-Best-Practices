@@ -1,0 +1,25 @@
+Production Code:
+    NPM Settings:
+        Make sure you pick the correct versions
+            npm config set save=true
+                No longer have to put --save for dependencies
+            npm config set save-exact=true
+                No longer have to put --save for dependencies and there's no ^ meaning exact version
+
+    Environmental Variables:
+        npm install -g foreman
+            nf start (has a default for environmental variables)
+                .env (use this file to set the defaults
+                    {
+                        "port": 9000,
+                        "connection": {
+                            "sql":"",
+                            "mongo":""
+                        }
+                    }
+
+    Cross Platform Concerns:
+        Windows/Mac isn't case sensitive where as Linux is, recommendation is to use lowercase with - to separate words
+
+    Simplify Your World:
+        K.I.S.S. (Keep it Simple Stupid) .. my life motto

@@ -1,0 +1,52 @@
+Syntax:
+    Semicolons:
+        Example: See Syntax/Automatic Semicolon Insertion.js
+
+        EcmaScript Standards: Certain ECMAScript statements must be terminated with semicolons.
+            For convenience, however such semicolons may be omitted from the source text in certain situations.
+            These situations are described by saying that semicolons are automatically inserted.
+
+        Three rules:
+            1.) When, as a Script or Module is parsed from left to right, a token (called the offending token) is
+                encountered that is not allowed by any production of the grammar.
+                    a.) The offending token is separated from the previous token by at least one LineTerminator
+                    b.) The offending token is a }
+
+            2.) When, as the Script of Module is parsed from left to right, the end of the input stream of tokens is
+            encountered, then a semicolon is automatically inserted at the end of the input stream.
+
+            3.) When, a token is encountered that is allowed by some production of the grammar, but the production
+            is a restricted production and the token would be the first token of a restricted production, and the
+            restricted token is separated from the previous token by at least one LineTerminator, then a semicolon is
+            automatically inserted before the restricted token.
+
+                Restricted Production: if you have continue, break, return, or throw statements
+
+        Use semicolons in conjunction with JSHint (or ESHint) to prevent potential issues
+            1.) Consistency with other languages
+            2.) Prevents the .01% issues
+
+    Linting:
+        A linter scans your code to detect potential problems and errors.
+
+        JS Lint: Preconfigured, not very configurable.
+
+        JS Hint: Fork of Lint and more configurable, built in package support, and not extensible.
+
+        ESLint: Most recent, custom rules support, lots of configuration options, not real user friendly.
+
+
+    Equality:
+        == If variables are two different types, it will convert them to the same type
+        === There will be no type conversion
+
+    Variables:
+        Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope.
+
+        A var statement declares variables that are scoped to the running execution context's VariableEnvironment.
+        Var variables are created when their containing Lexical Environment tis instantiated and are initialized
+        to undefined when created.
+
+    Functions:
+        Compiler goes through, finds all the functions then it goes back and actually initializes them unless
+        you have it as a var. Then you can't call the variable until it's been defined.

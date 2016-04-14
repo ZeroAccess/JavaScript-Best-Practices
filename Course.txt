@@ -1,0 +1,3 @@
+Course: JavaScript Best Practices
+Instructor: Jonathan Mills
+Location: Pluralsight

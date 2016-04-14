@@ -1,0 +1,40 @@
+Behaviors:
+    Global Variables:
+        Global Scope will assist in creating vars if you didn't declare it as a var. Just remember that it's
+        instantiated as undefined.
+
+    Strict Mode:
+        Put 'use strict'; at top of file to use strict mode
+        Use Strict scopes appropriately
+        Best to use when you're developing so you can view errors where JavaScript was trying to help you
+
+    Read Only Properties:
+        If you declare something as read only when you try to reassign it no assignment will happen
+        Can use 'use strict' to make sure you see the error
+
+    Deleting Stuff:
+        Cannot delete objects or variables
+        Can use 'use strict' to make sure you see the error
+
+    Duplicates:
+        Check the javascript but basically having duplicates in functions
+        Can use 'use strict' to make sure you see the error
+
+    Octals and Hexidecimals, Oh My:
+        When adding numbers having leading 0's make the number an Octal instead of an Integer
+        Cannot use Octals with strict mode you would need to use parseInt
+
+    With:
+        Stop using with, use an ify instead
+
+    This:
+        Use as a mechanism to reach into the containing object to for the variables or properties in that object
+        'use strict' instead of reaching up to the global scope it'll list that "this" is undefined
+
+    This in new Objects:
+        When new is used it creates a new scope, similar to how Java works at least in my head
+        Using a variable in the example it's _this = this and referring to the _this you're referencing
+        the _this which is a copy of this.
+        This is a bit confusing to me (basically you lose this scope by not
+        using a copy of it that you declare at the start of the function. So even if the "this" variable changes
+        it won't matter because you're still referencing the copy)
